@@ -373,6 +373,9 @@ li{
 
 @media (max-width: 600px) {
   :root{
-    --main-width: 100%;
+    --main-width: 75%;
+  }
+  body{
+    width: 100%;
   }
 }
