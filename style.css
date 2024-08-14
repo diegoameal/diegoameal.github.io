@@ -1,6 +1,6 @@
 @page{
   size: letter portrait;
-  margin: auto;
+  margin: 0;
 }
 
 *{
@@ -8,9 +8,9 @@
 }
 
 :root{
-  --page-width: 8.5in;
+  --page-width: 100%;
   --page-height: 11in;
-  --main-width: 6.4in;
+  --main-width: 75%;
   --sidebar-width: calc(var(--page-width) - var(--main-width));
   --decorator-horizontal-margin: 0.2in;
 
@@ -30,9 +30,12 @@
 }
 
 body{
-  width: var(--page-width);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 64%;
   height: var(--page-height);
-  margin: auto;
   font-family: "Open Sans", sans-serif; 
   font-weight: 300;
   line-height: 1.3;
