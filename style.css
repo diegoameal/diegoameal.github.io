@@ -378,7 +378,7 @@ li{
     --page-height: 100%;
   }
   body{
-    margin: 10px 0 0 0;
+    margin: 0;
     width: 100%;
   }
   #main{
