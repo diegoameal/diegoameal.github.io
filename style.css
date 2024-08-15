@@ -373,7 +373,7 @@ li{
 
 @media (max-width: 600px) {
   :root{
-    --main-width: 75%;
+    --main-width: 70%;
     --sidebar-horizontal-padding: 5vw;
     --page-height: 100%;
   }
