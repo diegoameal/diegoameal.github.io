@@ -374,7 +374,7 @@ li{
 @media (max-width: 600px) {
   :root{
     --main-width: 75%;
-    --sidebar-horizontal-padding: 0;
+    --sidebar-horizontal-padding: 5vw;
     --page-height: 100%;
   }
   body{
@@ -383,14 +383,14 @@ li{
     width: 100%;
   }
   #main{
-    margin-right: 10px;
+    margin-right: 5vw;
     padding: 0;
     font-size: 7px;
   }
   #sidebar{
     height: var(--page-height);
     margin: 0;
-    padding: 10px;
+    padding: 3vw;
     font-size: 8.5px;
   }
 }
