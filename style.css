@@ -382,7 +382,8 @@ li{
     width: 100%;
   }
   #main{
-    padding: 3vw;
+    margin: 0;
+    padding: 5vw;
     font-size: 7px;
   }
   #sidebar{
