@@ -387,7 +387,6 @@ li{
   }
   #sidebar{
     position: fixed;
-    top: 0px;
     right: 0px;
     margin: 0;
     padding: 3vw;
