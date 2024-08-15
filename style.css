@@ -370,7 +370,7 @@ li{
   font-weight: 400;
   font-style: normal;
 }
-/*
+
 @media (max-width: 600px) {
   :root{
     --main-width: 50%;
@@ -391,4 +391,4 @@ li{
     margin: 0;
     font-size: 8.5px;
   }
-}*/
+}
