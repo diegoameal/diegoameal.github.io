@@ -388,7 +388,6 @@ li{
     font-size: 7px;
   }
   #sidebar{
-    height: var(--page-height);
     margin: 0;
     padding: 3vw;
     font-size: 8.5px;
