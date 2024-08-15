@@ -379,4 +379,8 @@ li{
     margin: 0;
     width: 100%;
   }
+  #main{
+    padding: 5px;
+    font-size: 7px;
+  }
 }
