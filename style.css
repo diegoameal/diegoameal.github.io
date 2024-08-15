@@ -381,6 +381,7 @@ li{
     width: 100%;
   }
   #main{
+    margin-top: 0;
     font-size: 7px;
     padding: 10px;
   }
@@ -394,6 +395,6 @@ li{
   #title{
     margin-bottom: 10px;
     line-height: 1.2;
-    width: 100;
+    width: 100%;
   }
 }
