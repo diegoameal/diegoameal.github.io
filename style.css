@@ -374,7 +374,7 @@ li{
 @media (max-width: 600px) {
   :root{
     --main-width: 75%;
-    --sidebar-horizontal-padding: 0;
+    --sidebar-horizontal-padding: 0px;
     --page-height: 100%;
   }
   body{
@@ -383,8 +383,10 @@ li{
   }
   #main{
     font-size: 7px;
+    z-index: 1;
   }
   #sidebar{
+    z-index: 10;
     position: fixed;
     right: 100%;
     padding: 3vw;
