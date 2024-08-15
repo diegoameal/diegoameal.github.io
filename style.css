@@ -385,6 +385,8 @@ li{
     font-size: 7px;
   }
   #sidebar{
+    position: fixed;
+    right: 100%;
     padding: 3vw;
     font-size: 8.5px;
   }
