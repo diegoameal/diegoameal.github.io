@@ -383,8 +383,12 @@ li{
   }
   #main{
     font-size: 7px;
+    z-index: 1;
   }
   #sidebar{
+    z-index: 10;
+    position: fixed;
+    right: 100%;
     padding: 3vw;
     font-size: 8.5px;
   }
