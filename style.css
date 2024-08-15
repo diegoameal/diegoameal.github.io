@@ -382,11 +382,12 @@ li{
     width: 100%;
   }
   #main{
+    margin: 0;
     z-index: 1;
     font-size: 7px;
   }
   #sidebar{
-    position: absolute;
+    position: fixed;
     z-index: 100;
     top: 0px;
     right: 100%;
