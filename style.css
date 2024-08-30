@@ -276,6 +276,11 @@ li{
   float: right;
 }
 
+.details .intro{
+  font-size: 7.5pt;
+  margin-bottom: 5px;
+}
+
 .details div{
   clear: both;
 }
