@@ -279,6 +279,8 @@ li{
 .details .intro{
   font-size: 7.5pt;
   margin-bottom: 5px;
+  text-align: justify;
+  text-justify: auto;
 }
 
 .details div{
