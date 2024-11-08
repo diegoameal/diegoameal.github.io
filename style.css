@@ -172,7 +172,7 @@ li{
   padding-right: var(--decorator-horizontal-margin);
   font-size: 3pt;
   text-align: right;
-  line-height: 1;
+  line-height: 2;
 }
 
 .date span{
@@ -247,7 +247,7 @@ li{
 }
 
 .details h3{
-  font-size: 8pt;
+  font-size: 7pt;
   margin-bottom: 3px;
   line-height: 1.2;
 }
