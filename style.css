@@ -269,7 +269,8 @@ h2 {
 
 .details h3 {
   font-size: 11pt;
-  line-height: 2pt;
+  padding-top: 2pt;
+  padding-bottom: 2pt:
 }
 
 .main-block:not(.concise) .details div {
