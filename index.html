@@ -1,214 +1,288 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <link rel="stylesheet" type="text/css" href="dep/normalize.css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="dep/Font-Awesome/css/font-awesome.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body lang="es">      
-    <section id="main">
-      <header id="title">
-        <h1>Diego Ameal</h1>
-        <span class="subtitle">Neurociencias<br>Programación orientada a objetos<br>Bases de datos relacionales</span>
-      </header>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400italic,600italic,700italic,400,600,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400italic,600italic,700italic,400,600,700" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body lang="en">
+  <section id="main" style="width: 70vw; position: absolute;">
+    <header id="title">
+      {{#with info}}
+      <h1>{{firstname}} <strong>{{lastname}}</strong></h1>
+      {{#each bio}}
+      <div><span class="subtitle">{{this}}</span></div>
+      {{/each}}
+      {{/with}}
+    </header>
+    <section class="main-block">
+      <h2>
+        <i class="fas fa-suitcase"></i>{{ i18n 'experience_title' }}
+      </h2>
+      {{#each experience}}
+      <section class="blocks">
+        <div class="date">
+          {{#if to}}
+          <span>{{ monthYearDate to }}</span>
+          {{/if}}
+          {{#if since}}
+          <span>{{ monthYearDate since }}</span>
+          {{/if}}
+        </div>
+        <div class="decorator">
+        </div>
         <div class="details">
-       
-      </div>
-      <section class="main-block">
-        <h2>
-          <i class="fa fa-suitcase"></i> Estudios
-        </h2>
-        <section class="blocks">
-          <div class="date">
-            <span>sept 2024</span><span>mar 2024</span>
+          <header>
+            <h3>{{ position }}</h3>
+            <span class="place">{{ place }}</span>
+            <span class="location"><i class="fas fa-map-marker-alt"></i> {{ location }}</span>
+          </header>
+          {{#if details}}
+          <div>
+            <ul>
+              {{#each details}}
+              <li>{{ this }}</li>
+              {{/each}}
+            </ul>
           </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3 style="font-size: 6pt;">Certificado de Profesionalidad:</h3>
-              <h3>Programación con Lenguajes Orientados a Objetos y Bases de Datos Relacionales</h3>
-              <span class="place">Centro de Formación Ocupacional de Ferrol</span>
-              <span class="location">Ferrol, A Coruña </span>
-            </header>
-          </div>
-        </section>
-        <section class="blocks">
-          <div class="date">
-            <span>2022</span><span>2018</span>
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3 style="font-size: 8pt;">Estudios Universitarios:</h3>
-              <h3>Neuroscience BSc (Hons)</h3>
-              <span class="place">University of Sussex</span>
-              <span class="location">Brighton, Inglaterra</span>
-            </header>
-            <div>
-              <ul>
-                <li>Bachelor's Degree en Neurociencia</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <section class="blocks">
-          <div class="date">
-            <span>2017</span>
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3 style="font-size: 8pt;">Curso:</h3>
-              <h3>Auxiliar en Vela Ligera</h3>
-              <span class="place">CGV - Centro Galego de Vela</span>
-              <span class="location">Vilagarcía de Arousa, Pontevedra</span>
-            </header>
-          </div>
-        </section>
-      </section> 
-      <section class="main-block">
-        <h2>
-          <i class="fa fa-folder-open"></i> Idiomas
-        </h2>
-        <section class="blocks">
-          <div class="date">
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3>Español</h3>
-              <span class="place">Nivel: Nativo</span>
-            </header>
-          </div>
-        </section>
-        <section class="blocks">
-          <div class="date">
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3>Gallego</h3>
-              <span class="place">Nivel: Nativo</span>
-            </header>
-          </div>
-        </section>
-        <section class="blocks">
-          <div class="date">
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3>Inglés</h3>
-              <span class="place">Nivel: Profesional</span>
-            </header>
-            <div>
-              <ul>
-                <li>Estudos universitarios cursados íntegramente en inglés</li>
-                <li>Residencia de cuatro años en Inglaterra (2018-2022)</li>
-                <li>En posesión del "Pre-settled Status"</li>
-                <li>Common European Framework of Reference for Languages: Nivel C1 (2017)</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-      <section class="main-block concise">
-        <h2>
-          <i class="fa fa-graduation-cap"></i> Experiencia Laboral
-        </h2>
-        <section class="blocks">
-          <div class="date">
-            <span>2022</span><span>2018</span>
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3>Customer Service Assistant</h3>
-              <span class="place">Falmer Bar, University of Sussex</span>
-              <span class="location">Brighton, Inglaterra</span>
-            </header>
-          </div>
-        </section>
-        <section style="margin-bottom: 40px;" class="blocks">
-          <div class="date">
-            <span>2018</span><span>2017</span>
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3>Instructor de Vela Ligera</h3>
-              <span class="place">Club Náutico de Camariñas</span>
-              <span class="location">Camariñas, A Coruña</span>
-            </header>
-            <!--<div>Relationship of the number with the answer to life, the universe and everything</div>
-          </div>
-        </section>
-        <section class="blocks">
-          <div class="date">
-            <span>2005</span><span>2009</span>
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3>B.S. in Existential Science (Double Major)</h3>
-              <span class="place">Inexistent University</span>
-              <span class="location">Some City, Some Country</span>
-            </header>
-            <div>President's Scholarship</div>
-          </div>
-        </section>
-        <section class="blocks">
-          <div class="date">
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3>Massive Online Fee&ndash;Required Course (selective list)</h3>
-            </header>
-            <div class="concise">
-              <ul>
-                <li>Introduction to something else</li>
-                <li>Introduction to some more useless things</li>
-                <li>Philosophy in practice</li>
-                <li>Recursive research and its impact on recursive research</li>
-                <li>Artificial politics</li>
-              </ul>
-            </div>
-          </div>
-        </section>-->
+          {{/if}}
+        </div>
       </section>
+      {{/each}}
     </section>
-    <aside id="sidebar">
-      <div class="side-block" id="contact">
-        <h1>
-          Método<br>de Contacto
-        </h1>
+    {{#if projects}}
+    <section class="main-block">
+      <h2>
+        <i class="fas fa-folder-open"></i> {{ i18n 'projects_title' }}
+      </h2>
+      {{#each projects}}
+      <section class="blocks">
+        <div class="date">
+          {{#if to}}
+          <span>{{ to }}</span>
+          {{/if}}
+          {{#if since}}
+          <span>{{ since }}</span>
+          {{/if}}
+        </div>
+        <div class="decorator">
+        </div>
+        <div class="details">
+          <header>
+            <h3>{{ name }}</h3>
+            <span class="place">{{ workplace }}</span>
+          </header>
+          {{#if details}}
+          <div>
+            <ul>
+              {{#each details}}
+              <li>{{ this }}</li>
+              {{/each}}
+            </ul>
+          </div>
+          {{/if}}
+        </div>
+      </section>
+      {{/each}}
+    </section>
+    {{/if}}
+    {{#if certifications}}
+    <section class="main-block">
+      <h2>
+        <i class="fas fa-folder-open"></i> {{ i18n 'certifications_title' }}
+      </h2>
+      {{#each certifications}}
+      <section class="blocks">
+        <div class="date">
+          {{#if issueDate}}
+          <span>{{ onlyYearDate issueDate }}</span>
+          {{/if}}
+        </div>
+        <div class="decorator">
+        </div>
+        <div class="details">
+          <header>
+            <h3>{{ title }}</h3>
+            {{#if issuedBy}}
+            <span class="place">by {{ issuedBy }}
+            {{#if expirationDate}} | {{ i18n 'valid_until' }} {{ shortDate expirationDate }}{{/if}}
+            </span>
+            {{/if}}
+          </header>
+        </div>
+      </section>
+      {{/each}}
+    </section>
+    {{/if}}
+    {{#if education}}
+    <section class="main-block concise">
+      <h2>
+        <i class="fas fa-graduation-cap"></i> {{ i18n 'education_title' }}
+      </h2>
+      {{#each education}}
+      <section class="blocks">
+        <div class="date">
+          {{#if to}}
+          <span>{{ to }}</span>
+          {{/if}}
+          {{#if since}}
+          <span>{{ since }}</span>
+          {{/if}}
+        </div>
+        <div class="decorator">
+        </div>
+        <div class="details">
+          <header>
+            <h3>{{title}}</h3>
+            {{#if place}}<span class="place">{{ place }}</span>{{/if}}
+            {{#if location}}<span class="location"><i class="fas fa-map-marker-alt"></i> {{ location }}</span>{{/if}}
+          </header>
+          {{#if subtitle}}<div>{{ subtitle }}</div>{{/if}}
+          {{#if details}}
+          <div class="concise">
+            <ul>
+              {{#each details}}
+              <li>{{ this }}</li>
+              {{/each}}
+            </ul>
+          </div>
+          {{/if}}
+        </div>
+      </section>
+      {{/each}}
+    </section>
+    {{/if}}
+  </section>
+  <aside id="sidebar" style="margin-left: 70vw; position: absolute; height: 100vh; width: 30vw;">
+    {{#with contact}}
+    <div class="side-block" id="contact">
+      <h1>
+        {{i18n 'contact_title'}}
+      </h1>
+      <ul>
+        {{#if website}}
+        <li>
+          <a href={{website.href}}><i class="fab fa-safari"></i> {{ website.label }}</a>
+        </li>
+        {{/if}}
+        {{#if email}}
+        <li>
+          <a href={{email.href}}><i class="fas fa-envelope"></i> {{ email.label }}</a>
+        </li>
+        {{/if}}
+        {{#if skype}}
+        <li>
+          <a href={{skype.href}}><i class="fab fa-skype"></i> {{ skype.label }}</a>
+        </li>
+        {{/if}}
+        {{#if phoneNumber}}
+        <li>
+          <a href={{phoneNumber.href}}><i class="fas fa-phone-alt"></i> {{ phoneNumber.label }}</a>
+        </li>
+        {{/if}}
+      </ul>
+    </div>
+    {{/with}}
+    {{#with socialMedia}}
+    <div class="side-block" id="contact">
+      <h1>
+        {{i18n 'social_media_title'}}
+      </h1>
+      <ul>
+        {{#if github}}
+        <li> <a href={{github.href}}><i class="fab fa-github"></i> {{ github.label }}</a></li>
+        {{/if}}
+        {{#if linkedIn}}
+        <li> <a href={{linkedIn.href}}><i class="fab fa-linkedin-in"></i> {{ linkedIn.label }}</a></li>
+        {{/if}} 
+        {{#if twitter}}
+        <li> <a href={{twitter.href}}><i class="fab fa-twitter"></i> {{ twitter.label }}</a></li>
+        {{/if}}
+        {{#if credly}}
+        <li> <a href={{credly.href}}><i class="fa-solid fa-certificate"></i> {{ credly.label }}</a></li>
+        {{/if}}
+      </ul>
+    </div>
+    {{/with}}
+    {{#with skills}}
+    <div class="side-block" id="skills">
+      <h1>
+        {{ i18n 'skills_title' }}
+      </h1>
+      {{#if languages}}
+      <ul>
+        {{#each languages}}
+        <li>{{ this }}</li>
+        {{/each}}
+      </ul>
+      {{/if}}
+      {{#if frameworks}}
+      <ul>
+        {{#each frameworks}}
+        <li>{{ this }}</li>
+        {{/each}}
+      </ul>
+      {{/if}}
+      {{#if other}}
+      <ul>
+        {{#each other}}
+        <li>{{ this }}</li>
+        {{/each}}
+      </ul>
+      {{/if}}
+    </div>
+    {{/with}}
+    {{#if contributions}}
+    <div class="side-block" id="contributions">
+      <h1>
+        {{ i18n 'contributions_title' }}
+      </h1>
+      <ul>
+        {{#each contributions}}
+        <li>{{ repo }}</li>
         <ul>
-          <li><i class="fa fa-envelope"></i> Correo Electrónico:<br>diego.ameal@rai.usc.gal</li>
+          {{#each links}}
+          <li>- <a href="{{url}}">{{ label }}</a></li>
+          {{/each}}
         </ul>
-      </div>
-      <div class="side-block" id="skills">
-        <h1>
-          Otras<br>Habilidades
-        </h1>
-        <ul>
-          <li>Manejo fluído de <b>suites ofimáticas</b></li>
-          <li><b>Adaptable</b> a una amplia variedad de dinámicas laborales</li>
-          <li>Versatilidad social y <b>coordinación</b> en equipos</li>
-          <li>Determinado y autodidacta</li>
-        </ul>
-      </div>
-    </aside>
-  </body>
+        {{/each}}
+      </ul>
+    </div>
+    {{/if}}
+    {{#if badges}}
+    <div class="container-badges">
+      {{#with badges}}
+      {{#each aws}}
+      <a href="{{url}}" target="_blank">
+        <img class="badge" src="{{imgUrl}}" alt="{{title}}" title="{{title}}">
+      </a>
+      {{/each}}
+      {{#each azure}}
+      <a href="{{url}}" target="_blank">
+        <img class="badge" src="{{imgUrl}}" alt="{{title}}" title="{{title}}">
+      </a>
+      {{/each}}
+      {{#each linuxfoundation}}
+      <a href="{{url}}" target="_blank">
+        <img class="badge" src="{{imgUrl}}" alt="{{title}}" title="{{title}}">
+      </a>
+      {{/each}}
+      {{/with}}
+    </div>
+    {{/if}}
+    {{#with build}}
+    <div class="side-block" id="disclaimer">
+      <p><a href="{{ repoUrl }}/releases/tag/{{ version }}">{{ tagRef }} <i class="fas fa-code-branch"></i></a></p>
+      <p><a href="{{ repoUrl }}/commit/{{ commitSha }}">commit {{ commitSha }} <i class="fas fa-code"></i></p></a>
+      <p>{{ i18n 'compiled_with_lbl' }} <a href="{{ repoUrl }}/actions"><code>GitHub Actions <i class="fab fa-github-square"></i></code></a></p>
+    </div>
+    {{/with}}
+  </aside>
+</body>
 </html>
