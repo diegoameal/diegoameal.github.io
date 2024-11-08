@@ -172,7 +172,7 @@ li{
   padding-right: var(--decorator-horizontal-margin);
   font-size: 3pt;
   text-align: right;
-  line-height: 2;
+  line-height: 0.5;
 }
 
 .date span{
@@ -184,7 +184,7 @@ li{
   top: 1pt;
   right: 5.5pt;
   display: block;
-  height: 7pt;
+  height: 3pt;
   content: '|';
 }
 
@@ -247,7 +247,7 @@ li{
 }
 
 .details h3{
-  font-size: 7pt;
+  font-size: 8pt;
   margin-bottom: 3px;
   line-height: 1.2;
 }
@@ -403,7 +403,7 @@ li{
     -moz-hyphens: none;
     hyphens: none;
     h3{
-      font-size: 14px;
+      font-size: 8px;
     }
     ul{
       font-size: 9px;
