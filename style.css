@@ -172,7 +172,7 @@ li{
   padding-right: var(--decorator-horizontal-margin);
   font-size: 3pt;
   text-align: right;
-  line-height: 0.5;
+  line-height: 1pt;
 }
 
 .date span{
@@ -181,7 +181,7 @@ li{
 
 .date span:nth-child(2)::before{
   position: relative;
-  top: 0.5pt;
+  top: 1pt;
   right: 5.5pt;
   display: block;
   height: 3pt;
@@ -417,7 +417,7 @@ li{
       font-size: 10px;
     }
     .date span{
-      font-size: 5px;
+      font-size: 3pt;
     }
   }
   #sidebar{
